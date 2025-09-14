@@ -16,7 +16,7 @@ This is a collection of repositories and PoCs used for Rhadamanthus testing. It 
 **Important:** This repository uses git submodules. You must clone with submodules to get all the components:
 
 ```bash
-git clone --recursive https://github.com/yourusername/Rootkit-Suite.git
+git clone --recursive https://github.com/Mirtia/Rootkit-Suite.git
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ For a clean Ubuntu 20.04 VM setup:
 1. Clone this repository with submodules:
    ```bash
    sudo apt install git
-   git clone --recursive https://github.com/yourusername/Rootkit-Suite.git
+   git clone --recursive https://github.com/Mirtia/Rootkit-Suite.git
    cd Rootkit-Suite
    ```
 
