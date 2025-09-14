@@ -12,4 +12,4 @@
 	url = https://github.com/MatheuZSecurity/KillHook.git
 [submodule "bds_lkm_ftrace"]
 	path = bds_lkm_ftrace
-	url = https://github.com/bluedragonsecurity/bds_lkm_ftrace.git
+	url = https://github.com/Mirtia/bds_lkm_ftrace.git
