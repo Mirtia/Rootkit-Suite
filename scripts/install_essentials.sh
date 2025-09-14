@@ -12,7 +12,6 @@ set -e
 #   --liburing   build & install liburing + io_uring-cp
 #   --go         install Go (default 1.22.6). Override: GO_VERSION=1.23.1 bash setup-min.sh --go
 #   --clang14    install clang-14 from apt.llvm.org
-#   --repositories install repositories (Clueless-Admin)
 
 ENABLE_BASICS=0
 ENABLE_NET=0
@@ -21,7 +20,6 @@ ENABLE_UV=0
 ENABLE_LIBURING=0
 ENABLE_GO=0
 ENABLE_CLANG14=0
-ENABLE_REPOSITORIES=0
 
 for arg in "$@"; do
   case "$arg" in
@@ -32,7 +30,6 @@ for arg in "$@"; do
     --liburing) ENABLE_LIBURING=1 ;;
     --go)       ENABLE_GO=1 ;;
     --clang14)  ENABLE_CLANG14=1 ;;
-    --repositories) ENABLE_REPOSITORIES=1 ;;
     -h|--help)
       grep '^# ' "$0" | sed 's/^# //'
       exit 0
@@ -146,10 +143,5 @@ if [ "$ENABLE_CLANG14" -eq 1 ]; then
   echo "If needed: export PATH=/usr/local/bin:\$PATH"
 fi
 
-
-if [ "$ENABLE_REPOSITORIES" -eq 1 ]; then
-  cd "${HOME}/Documents"
-  git clone https://github.com/Mirtia/Clueless-Admin.git
-fi
 
 echo "Done."
